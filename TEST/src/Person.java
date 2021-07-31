@@ -7,9 +7,9 @@ public class Person {
 		name = s;
 	}
 	
-	public void setAge(int n) {
-		age = n;
-		n++;
+	public void setAge(MyInt i) {
+		age = i.val;
+		i.val++;
 	}
 
 }
