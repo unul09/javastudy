@@ -1,18 +1,28 @@
-
+import java.util.Scanner;
 public class GoodsEx {
 	
 	public static void main(String[] args) {
 		
-		Goods camera = new Goods();
-		camera.name = "Nikon";
-		camera.price = 400000;
-		camera.numberOfStock = 30;
-		camera.sold = 50;
+		Goods[] goodsArray;
+		goodsArray = new Goods[3];
+		Scanner s = new Scanner(System.in);
 		
-		System.out.println("상품 이름: " + camera.name);
-		System.out.println("상품 가격: " + camera.price);
-		System.out.println("재고 수량: " + camera.numberOfStock);
-		System.out.println("팔린 수량: " + camera.sold);
+		for(int i=0; i<goodsArray.length; i++) {
+			String name = s.next();
+			int price = s.nextInt();
+			int numberOfStock = s.nextInt();
+			int sold = s.nextInt();
+			goodsArray[i] = new Goods(name, price, numberOfStock, sold);
+		}
+		
+		for(int i=0; i<goodsArray.length; i++) {
+			System.out.print(goodsArray[i].getName() + " ");
+			System.out.print(goodsArray[i].getPrice() + " ");
+			System.out.print(goodsArray[i].getNumberOfStock() + " ");
+			System.out.println(goodsArray[i].getSold() + " ");
+		}
+		
+		
 		
 
 	}
