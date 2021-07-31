@@ -1,23 +1,16 @@
-//import java.util.Scanner;
-public class arrayTest { //범위를 벗어난 배열의 접근
+import java.util.Scanner;
+public class arrayTest { //string array, for-each
 	
 	
 	public static void main(String[] args) {		
-		//Scanner sc = new Scanner(System.in);
-		int intArray[] = new int[4];
+		Scanner sc = new Scanner(System.in);
+		String name[] = new String[3];
 		
-		
-		
-		try {
-			for(int i=0; i<5; i++) {
-			intArray[i] = 4;
-			}
+		for(String n : name) {
+			n = sc.next();
+			System.out.println(n);
 		}
-		catch(ArrayIndexOutOfBoundsException e){
-			System.out.println("그 인덱스는 접근 불가한데요.");
-			
-		}
-		//sc.close();
+		sc.close();
 			
 	}
 
