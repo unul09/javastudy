@@ -1,28 +1,21 @@
-import java.util.Scanner;
-import java.util.InputMismatchException;
-
-public class arrayTest { // 입력오류 예외처리
+//import java.util.Scanner;
+public class arrayTest { // 정수가 아닌 문자열을 정수로 변환할 때 예외 발생
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		// Scanner sc = new Scanner(System.in);
+		String stringNumber[] = { "23", "4.555", "788", "df" };
 
-		System.out.println("정수를 입력해 주세요. -1 입력시 프로그램 종료");
-
-		while (true) {
+		for (int i = 0; i < stringNumber.length; i++) {
 			try {
-				System.out.print(">");
-				int a = sc.nextInt();
-				if (a == -1) {
-					System.out.println("프로그램 종료");
-					break;
-				}
-			} catch (InputMismatchException e) {
-				System.out.println("정수가 아닙니다! 다시 입력해주세요");
-				sc.next();
+				int num = Integer.parseInt(stringNumber[i]);
+				System.out.println("정수로 변환된 값은 " + num);
+			} catch (NumberFormatException e) {
+				System.out.println(stringNumber[i] + "은 정수 변환 불가");
 			}
+
 		}
 
-		sc.close();
+		// sc.close();
 
 	}
 
