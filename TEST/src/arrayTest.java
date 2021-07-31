@@ -1,24 +1,23 @@
-import java.util.Scanner;
-public class arrayTest { //0으로 나눌 때 발생하는 ArithmeticException 예외 처리
+//import java.util.Scanner;
+public class arrayTest { //범위를 벗어난 배열의 접근
 	
 	
 	public static void main(String[] args) {		
-		Scanner sc = new Scanner(System.in);
-		while(true) {
-			System.out.print("나뉨수를 입력하시오:");
-			int dividend = sc.nextInt(); // 나뉨수 입력
-			System.out.print("나눗수를 입력하시오:");
-			int divisor = sc.nextInt(); // 나눗수 입력
-			
-			try {
-				System.out.println(dividend+"를 "+divisor+"로 나눈 값은 "+dividend/divisor+"입니다.");
-				break;
+		//Scanner sc = new Scanner(System.in);
+		int intArray[] = new int[4];
+		
+		
+		
+		try {
+			for(int i=0; i<5; i++) {
+			intArray[i] = 4;
 			}
-			catch(ArithmeticException e) {
-				System.out.println("0으로 나누지 마시오! 다시.");
-			}
-
 		}
+		catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("그 인덱스는 접근 불가한데요.");
+			
+		}
+		//sc.close();
 			
 	}
 
