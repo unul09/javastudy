@@ -1,15 +1,23 @@
 
 public class Person {
-	public String name;
-	public int age;
+	private String name;
+	private int age;
 	
-	public Person(String s) {
-		name = s;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
-	public void setAge(MyInt i) {
-		age = i.val;
-		i.val++;
+	public void tell() {
+		System.out.println("안녕하세요? " + age + "살 " +name +"이에요.");
 	}
 
 }
