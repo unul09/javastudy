@@ -3,6 +3,10 @@ public class DefaultConstructor {
 	int x;
 	public void setX(int x) {this.x = x;}
 	public int getX() {return x;}
+	
+	public DefaultConstructor(int x) {
+		this.x = x;
+	}
 
 	public static void main(String[] args) {
 		
@@ -10,9 +14,11 @@ public class DefaultConstructor {
 		p.setX(3);
 		System.out.println(p.getX());
 		
-		//디폴트 생성자가 컴파일러에 의해 자동 삽입된다고 하는데,
-		//삽입된거 같긴 한데 보이지가 않는다. 문제가 있을까?
-
+		
+		/* 기본 생성자가 자동 생성되지 않는 경우
+		 * 
+		 * 클래스에 생성자가 하나라도 존재하면 자동으로 기본생성자가 생성되지 않음
+		 */
 	}
 
 }
