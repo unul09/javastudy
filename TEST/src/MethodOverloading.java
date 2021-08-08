@@ -6,7 +6,8 @@ public class MethodOverloading {
 	}
 	
 	public int getSum(int i, int j, int k) {
-		return i+j+k;
+		int a = this.getSum(i, j);
+		return a+k;
 	}
 	
 	public double getSum(double i, double j) {
